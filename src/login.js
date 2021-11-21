@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import MapPosition from "./Map";
+import MapPosition from "./map";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import {Route, Router } from 'react-router';
