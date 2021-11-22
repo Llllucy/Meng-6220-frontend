@@ -1,6 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import MyMap from "./login";
+import MyMap from "./map";
 
-ReactDOM.render(<MyMap />, document.getElementById("root"));
+import Login from './login';
+
+import App from './app'
+	
+ ReactDOM.render(<App />, document.getElementById("root"));

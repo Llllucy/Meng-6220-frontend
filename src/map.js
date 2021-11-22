@@ -1,8 +1,8 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
 import MyMarker from "./components/MyMarker";
-
-
+import {useEffect} from 'react';
+import { useLocation } from "react-router-dom";
 const distanceToMouse = (pt, mp) => {
   if (pt && mp) {
     
@@ -12,11 +12,24 @@ const distanceToMouse = (pt, mp) => {
   }
 };
 
+//const func = ()=> {
+//     const x = 33.7756;
+//     const y = -84.3963;
+//     return {lat: x, lng: y};
+// }
+
 const points = [{ id: 1, title: "GaTech", lat: 33.7756, lng: -84.3963 }];
 
-const API_KEY = process.env.mapAPI;
+//const points = [{ id: 1, title: "GaTech"}];
+const API_KEY = "AIzaSyBIQtSgFH36RkiJnlAY5PzjSNcnztmeg-o";
 
 export default function App() {
+  const { state } = useLocation();
+  //useEffect(()=> {console.log(state)});
+  //useEffect(()=> {points.push(func());
+  //console.log(points)};
+
+
   return (
     <div className="App">
       ;
