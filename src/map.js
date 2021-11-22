@@ -21,7 +21,7 @@ const distanceToMouse = (pt, mp) => {
 const points = [{ id: 1, title: "GaTech", lat: 33.7756, lng: -84.3963 }];
 
 //const points = [{ id: 1, title: "GaTech"}];
-const API_KEY = "AIzaSyBIQtSgFH36RkiJnlAY5PzjSNcnztmeg-o";
+const API_KEY = mykey;
 
 export default function App() {
   const { state } = useLocation();
