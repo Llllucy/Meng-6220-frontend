@@ -5,6 +5,10 @@ class GetRequest extends React.Component {
         super(props);
 
         this.state = {
+            id=props.id,
+            lat=props.lat,
+            lgt=props.lgt,
+            cid=props.cid,
             item0: null,
             item1: null,
             item2: null
@@ -12,7 +16,7 @@ class GetRequest extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:8002/recommend/getRecommend?userId=4704239730&latitude=1.0&longitude=2.0&cityId=1')
+        fetch('http://localhost:8002/recommend/getRecommend?userId='+this.id+'&latitude='+this.lat+'&longitude='+this.lgt+'&cityId='+this.cid)
             .then(response => response.json())
             .then(data => this.setState({ item0: data[0],item1: data[1],item2: data[2] }));
     }

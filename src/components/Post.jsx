@@ -5,9 +5,9 @@ class PostRequest extends React.Component {
         super(props);
 
         this.state = {
-            userId: userId,
-            userName: userName,
-            gender:gender
+            userId: props.userId,
+            userName: props.userName,
+            gender:props.gender
         };
     }
 
@@ -19,7 +19,7 @@ class PostRequest extends React.Component {
             userName: userName,
             gender:gender})
         };
-        fetch('http://localhost:8002/user/updateUser?userId=4704239730&userName=Shuran Wen&gender=0', requestOptions)
+        fetch('http://localhost:8002/user/updateUser?userId='+this.userId+'&userName='+this.userName+'&gender='+this.gender, requestOptions)
             .then(response => response.json())
             .then(data => this.setState({ userId: data.userId, userName: data.userName, gender:data.gender }));
     }

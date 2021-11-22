@@ -24,7 +24,7 @@ export default function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    <PostRequest />
+    <PostRequest userId=userId userName=userName gender=gender/>
     navigate('/map/', {state: userId});
   }
 

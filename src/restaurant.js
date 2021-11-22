@@ -6,7 +6,8 @@ export default function Restaurants() {
 
     const {lat, lng} = useParams(); 
 
+
     return (
-      <GetRequest />
+      <GetRequest id=id lat=lat lng=lng cid=1/>
       )
 }
