@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import MapPosition from "./map";
+<<<<<<< HEAD
 import PostRequest from "./components/Post";
+=======
+>>>>>>> 8c0c611a945801b66b033f3e3feaccd93dc0a9e3
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import {Route, Router } from 'react-router';
