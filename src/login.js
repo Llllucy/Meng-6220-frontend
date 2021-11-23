@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import MapPosition from "./map";
-<<<<<<< HEAD
-import PostRequest from "./components/Post";
-=======
->>>>>>> 8c0c611a945801b66b033f3e3feaccd93dc0a9e3
+import PostRequest from "./components/Post2";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import {Route, Router } from 'react-router';
 import { useNavigate } from "react-router-dom";
+
 export default function Login() {
   const [userId, setID] = useState("");
   const [userName, setName] = useState("");
@@ -24,8 +22,9 @@ export default function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    <PostRequest userId=userId userName=userName gender=gender/>
-    navigate('/map/', {state: userId});
+    navigate('/map/', {state: userId})
+    return(<PostRequest userId={userId} userName={userName} gender={gender} />)
+    
   }
 
   return (

@@ -5,10 +5,10 @@ class GetRequest extends React.Component {
         super(props);
 
         this.state = {
-            id=props.id,
-            lat=props.lat,
-            lgt=props.lgt,
-            cid=props.cid,
+            id:props.id,
+            lat:props.lat,
+            lgt:props.lgt,
+            cid: props.cid,
             item0: null,
             item1: null,
             item2: null
@@ -22,12 +22,7 @@ class GetRequest extends React.Component {
     }
 
     render() {
-    const { error, isLoaded, item0,item1,item2 } = this.state;
-    if (error) {
-      return <div>Error: {error.message}</div>;
-    } else if (!isLoaded) {
-      return <div>Loading...</div>;
-    } else {
+    const {item0,item1,item2 } = this.state;
       return (
             <div class="restaurantPage">
                 <div><h1>Restaurants Recommendation Page</h1>
@@ -40,7 +35,7 @@ class GetRequest extends React.Component {
             </div>
         );
     }
-  }
+  
 }
 
 export default{ GetRequest }; 

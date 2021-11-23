@@ -12,42 +12,31 @@ const distanceToMouse = (pt, mp) => {
   }
 };
 
-//const func = ()=> {
-//     const x = 33.7756;
-//     const y = -84.3963;
-//     return {lat: x, lng: y};
-// }
 
-const points = [{ id: 1, title: "GaTech", lat: 33.7756, lng: -84.3963 }];
+const point = [{ id: 1, title: "GaTech", lat: 33.7756, lng: -84.3963 }];
+const randomLat=Math.random()
+const randomLgn=Math.random()
+const points = [{ id: 1, title: "User", lat: randomLat*20+30, lng: -randomLgn*40-80 }];
 
-//const points = [{ id: 1, title: "GaTech"}];
-const API_KEY = mykey;
+const API_KEY = "Replace with your api key";
 
 export default function App() {
   const { state } = useLocation();
-  //useEffect(()=> {console.log(state)});
-  //useEffect(()=> {points.push(func());
-  //console.log(points)};
-
-
   return (
-    <div className="App">
-      ;
-      <GoogleMapReact
-        bootstrapURLKeys={{
-          
+    <div className="App">;
+      <GoogleMapReact bootstrapURLKeys={{
           key: API_KEY,
           language: "en",
           region: "US"
         }}
-        defaultCenter={{ lat: 33.7756, lng: -84.3963 }}
-        defaultZoom={15}
-        distanceToMouse={distanceToMouse}
-      >
+        defaultCenter={{ lat: randomLat*30+20, lng: -randomLgn*40-80 }}
+        defaultZoom={5}
+        distanceToMouse={distanceToMouse}>
+        
         {points.map(({ lat, lng, id, title }) => {
           return (
             <MyMarker key={id} lat={lat} lng={lng} text={id} tooltip={title} />
-          );
+          )
         }
         )}
       </GoogleMapReact>
