@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
-export default function GetRequest(props) {
+export default function GetRequest({id, lat, lng, cid}) {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
-  const id = props.id;
-  const lat = props.lat;
-  const lgt = props.lgt;
-  const cid = props.cid;
+  console.log(lat)
+  console.log(lng)
+ 
   useEffect(() => {
-    fetch('http://localhost:8002/recommend/getRecommend?userId='+id+'&latitude='+lat+'&longitude='+lgt+'&cityId='+cid)
+    fetch('http://localhost:8002/recommend/getRecommend?userId='+id+'&latitude='+lat+'&longitude='+lng+'&cityId='+cid)
       .then(res => res.json())
       .then(
         (result) => {
@@ -29,12 +28,12 @@ export default function GetRequest(props) {
     return <div>Loading...</div>;
   } else {
     return (
-      <div class="restaurantPage">
+      <div className="restaurantPage">
                 <div><h1>Restaurants Recommendation Page</h1>
-                    <ul class="list-group">
-                      <li class="list-group-item">items[0]</li>
-                      <li class="list-group-item">items[1]</li>
-                      <li class="list-group-item">items[2]</li>
+                    <ul className="list-group">
+                      <li className="list-group-item">items[0]</li>
+                      <li className="list-group-item">items[1]</li>
+                      <li className="list-group-item">items[2]</li>
                     </ul>
                 </div>
             </div>

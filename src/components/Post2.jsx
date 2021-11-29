@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-export default function PostRequest(props) {
+export default function PostRequest({userId, userName, gender}) {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
-  const id = props.id;
-  const lat = props.lat;
-  const lgt = props.lgt;
-  const cid = props.cid;
 
-  
   useEffect(() => {
     const requestOptions = {
             method: 'POST',

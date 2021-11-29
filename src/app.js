@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import MyMap from "./map";
 import Login from './login';
-import Restaurant from './restaurant';
+import Restaurant from './restaurants';
 import {
   BrowserRouter as Router,
   Routes,
