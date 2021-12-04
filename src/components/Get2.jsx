@@ -28,14 +28,36 @@ export default function GetRequest({id, lat, lng, cid}) {
     return <div>Loading...</div>;
   } else {
     return (
-      <div className="restaurantPage">
-                <div><h1>Restaurants Recommendation Page</h1>
-                    <ul className="list-group">
-                      <li className="list-group-item">items[0]</li>
-                      <li className="list-group-item">items[1]</li>
-                      <li className="list-group-item">items[2]</li>
-                    </ul>
-                </div>
+      <div class="restaurantPage bg-warning bg-opacity-50 p-5" >
+            <h1 class="text-center">Restaurants Recommendation Page</h1>
+            <div class="row col-md-10 p-5 m-5">
+            <table class="table center table-warning table-hover text-center ">
+              <thead>
+                <tr class="table-warning">
+                  <th scope="col"> </th>
+                  <th scope="col">#</th>
+                  <th scope="col">Restaurant Results</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-warning">
+                  <th scope="row"> </th>
+                  <td class="align-middle">1</td>
+                  <td class="align-middle">Restaurant item[0]</td>
+                </tr>
+                <tr class="table-warning">
+                  <th scope="row"> </th>
+                  <td class="align-middle">2</td>
+                  <td class="align-middle">Restaurant item[1]</td>
+                </tr>
+                <tr class="table-warning">
+                  <th scope="row"> </th>
+                  <td class="align-middle">3</td>
+                  <td class="align-middle">Restaurant item[2]</td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
             </div>
     );
   }

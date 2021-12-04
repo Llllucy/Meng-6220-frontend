@@ -101,20 +101,17 @@ h1 {
   font-weight: 200;
   font-size: 3rem;
 }
+.restaurantPage{
+  background-color: yellow;
+  background-opacity: 50;
 
-.list-group{
-  background-color: #E8ECEF;
-  list-style-type: upper-roman;
-  text-align: center;
-  font-size: 2rem;
-  }
-
-.list-group-item{
-  border-style: ridge;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: center;
-  margin-right: 150px;
-  margin-left: 150px;
 }
+
+.table {
+    border-radius: 5px;
+    width: 50%;
+    margin: 0px auto;
+    float: none;
+}
+
 

@@ -18,7 +18,7 @@ const randomLat=Math.random()
 const randomLgn=Math.random()
 const points = [{ id: 1, title: "User", lat: randomLat*20+30, lng: -randomLgn*40-80 }];
 
-const API_KEY = "replace with a valid API key";
+const API_KEY = "replace with a valid goole map API key";
 
 export default function App() {
   const { state } = useLocation();
